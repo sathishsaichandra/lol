@@ -1,0 +1,219 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "description": "swagger REST API with CRUD",
+        "title": "movies API"
+    },
+    "host": "localhost:8000",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        
+        "/app/Register/":{
+            "post":{
+                "description":"type should be admin or customer or sp",
+                "parameters":[
+                    {
+                    "in":"formData",
+                    "name":"type",
+                    "required":"true"
+
+                    },
+                    {
+                        "in":"formData",
+                        "name":"username",
+                        "required":"true"
+    
+                        },
+                    {
+                        "in":"formData",
+                        "name":"phone",
+                        "required":"true"
+    
+                        },
+                        {
+                            "in":"formData",
+                            "name":"email",
+                            "required":"true"
+        
+                            },
+                    
+                            {
+                                "in":"formData",
+                                "name":"password",
+                                "required":"true"
+            
+                                },
+                                {
+                                    "in":"formData",
+                                    "name":"password_confirmation",
+                                    "required":"true"
+                
+                                    }
+                    
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully deleted the data"
+                    }
+                }
+
+              
+            }
+        },
+        "/app/Login/":{
+            "post":{
+                "description":"type should be admin or customer or sp",
+                "parameters":[
+                    {
+                        "in":"formData",
+                        "name":"type",
+                        "required":"true"
+    
+                        },
+                    {
+                    "in":"formData",
+                    "name":"username",
+                    "required":"true"
+
+                    },
+                    
+                         {
+                                "in":"formData",
+                                "name":"password",
+                                "required":"true"
+            
+                         }
+                    
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully deleted the data"
+                    }
+                }
+                
+
+            }
+        },
+        "/app/find/":{
+            "post":{
+                "description":"put the type of which you find the near by distance",
+                "parameters":[
+                    {
+                        "in":"formData",
+                        "name":"token",
+                        "required":"true"
+    
+                        },
+                     {
+                            "in":"formData",
+                            "name":"type",
+                            "required":"true"
+        
+                      },
+                     {
+                                "in":"formData",
+                                "name":"latitude",
+                                "required":"true"
+            
+                     },
+                     {
+                        "in":"formData",
+                        "name":"longitude",
+                        "required":"true"
+    
+             },{
+                "in":"formData",
+                "name":"distance",
+                "required":"true"
+
+         }
+                        
+                    
+                    
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully deleted the data"
+                    }
+                }
+                
+
+            }
+        },
+
+        "/app/Update/":{
+            "post":{
+                "description":"type should be admin or customer or sp",
+                "parameters":[
+                    
+                    {
+                    "in":"formData",
+                    "name":"token",
+                    "required":"true"
+
+                    },
+                    
+                         {
+                                "in":"formData",
+                                "name":"latitude",
+                                "required":"true"
+            
+                         },
+                         {
+                            "in":"formData",
+                            "name":"longitude",
+                            "required":"true"
+        
+                     }
+                     
+                    
+                ],"responses": {
+                    "200": {
+                        "description": "Successfully deleted the data"
+                    }
+                }
+                
+
+            }
+        },
+        "/app/Admin_fetch/":{
+            "post":{
+                "description":"fetch should be customer or sp",
+                "parameters":[
+                    
+                    {
+                    "in":"formData",
+                    "name":"token",
+                    "required":"true"
+
+                    },
+                    
+                         {
+                                "in":"formData",
+                                "name":"fetch",
+                                "required":"true"
+            
+                         }
+                    
+                ],"responses": {
+                    "200": {
+                        "description": "Successfully deleted the data"
+                    }
+                }
+                
+
+            }
+        }
+       
+       
+       
+        
+        
+        
+        
+    }
+}
